@@ -8,7 +8,6 @@
 import UIKit
 
 extension UIColor {
-    // MARK: - Properties
     static var appThemeColor: UIColor {
         UIColor(red: 22/255, green: 19/255, blue: 48/255, alpha: 1)
     }

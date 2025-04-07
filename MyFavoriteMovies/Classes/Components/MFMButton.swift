@@ -18,7 +18,7 @@ class MFMButton: UIButton {
     
     let spinner: UIActivityIndicatorView = {
         let spinner = UIActivityIndicatorView()
-        spinner.color = UIColor.appThemeColor
+        spinner.color = .appThemeColor
         spinner.style = .medium
         spinner.hidesWhenStopped = true
         spinner.translatesAutoresizingMaskIntoConstraints = false
@@ -39,7 +39,7 @@ class MFMButton: UIButton {
         layer.borderWidth = 2
         layer.borderColor = UIColor.systemGray.cgColor
         backgroundColor = .white
-        setTitleColor(UIColor.appThemeColor, for: .normal)
+        setTitleColor(.appThemeColor, for: .normal)
         setupSpinner()
     }
     

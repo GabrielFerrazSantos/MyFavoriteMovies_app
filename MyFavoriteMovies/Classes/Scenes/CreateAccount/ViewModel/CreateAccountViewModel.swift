@@ -5,7 +5,6 @@
 //  Created by Gabriel Ferraz dos Santos on 14/03/25.
 //
 
-// MARK: - Protocols
 protocol CreateAccountViewModel {
     var state: Bindable<CreateAccountViewModelState> { get }
     var viewData: CreateAccountViewData { get }
@@ -19,8 +18,6 @@ protocol CreateAccountViewModelDelegate: AnyObject {
     func goToLogin()
 }
 
-
-// MARK: - Enum
 enum CreateAccountViewModelState {
     case initial
     case loading
@@ -28,7 +25,6 @@ enum CreateAccountViewModelState {
     case failure
 }
 
-// MARK: - Class
 class CreateAccountViewModelConcrete: CreateAccountViewModel {
     // MARK: - Properties
     var state: Bindable<CreateAccountViewModelState> = .init(.initial)

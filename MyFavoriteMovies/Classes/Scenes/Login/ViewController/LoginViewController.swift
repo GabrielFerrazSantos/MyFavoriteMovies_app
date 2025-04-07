@@ -101,7 +101,7 @@ class LoginViewController: Controller {
                 
             case .success:
                 self.loginButton.isLoading = false
-                print("Sucesso")
+                self.viewModel.goToHome()
                 
             case .failure:
                 self.loginButton.isLoading = false
@@ -192,7 +192,7 @@ extension LoginViewController: ViewCode {
     }
     
     func setupStyle() {
-        view.backgroundColor = UIColor.appThemeColor
+        view.backgroundColor = .appThemeColor
     }
 }
 

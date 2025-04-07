@@ -200,7 +200,7 @@ extension CreateAccountViewController: ViewCode {
     }
     
     func setupStyle() {
-        view.backgroundColor = UIColor.appThemeColor
+        view.backgroundColor = .appThemeColor
     }
 }
 

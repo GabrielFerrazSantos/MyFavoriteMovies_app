@@ -12,10 +12,12 @@ protocol LoginViewModel {
     
     func login(username: String, password: String)
     func goToCreateAccount()
+    func goToHome()
 }
 
 protocol LoginViewModelDelegate: AnyObject {
     func goToCreateAccount()
+    func goToHome()
 }
 
 enum LoginViewModelState {
@@ -38,6 +40,7 @@ class LoginViewModelConcrete: LoginViewModel {
         
         service.login(username: username, password: password) { result in
             Session.setupUserLogged(result)
+            
             self.state.value = .success
         } failure: { _ in
             self.state.value = .failure
@@ -46,5 +49,9 @@ class LoginViewModelConcrete: LoginViewModel {
     
     func goToCreateAccount() {
         delegate?.goToCreateAccount()
+    }
+    
+    func goToHome() {
+        delegate?.goToHome()
     }
 }

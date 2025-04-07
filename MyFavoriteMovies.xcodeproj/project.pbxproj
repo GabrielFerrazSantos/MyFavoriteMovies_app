@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C00424812D810B1E0038CA01 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C00424802D810B1E0038CA01 /* Alamofire */; };
+		C0894D3B2DA0884A009F6E7E /* ShimmerView in Frameworks */ = {isa = PBXBuildFile; productRef = C0894D3A2DA0884A009F6E7E /* ShimmerView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C00424812D810B1E0038CA01 /* Alamofire in Frameworks */,
+				C0894D3B2DA0884A009F6E7E /* ShimmerView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +133,7 @@
 			name = MyFavoriteMovies;
 			packageProductDependencies = (
 				C00424802D810B1E0038CA01 /* Alamofire */,
+				C0894D3A2DA0884A009F6E7E /* ShimmerView */,
 			);
 			productName = MyFavoriteMovies;
 			productReference = C00424262D806DD40038CA01 /* MyFavoriteMovies.app */;
@@ -217,6 +220,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				C004247F2D810B1E0038CA01 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C0894D392DA0884A009F6E7E /* XCRemoteSwiftPackageReference "ShimmerView" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C00424272D806DD40038CA01 /* Products */;
@@ -589,6 +593,14 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		C0894D392DA0884A009F6E7E /* XCRemoteSwiftPackageReference "ShimmerView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mercari/ShimmerView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -596,6 +608,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C004247F2D810B1E0038CA01 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		C0894D3A2DA0884A009F6E7E /* ShimmerView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C0894D392DA0884A009F6E7E /* XCRemoteSwiftPackageReference "ShimmerView" */;
+			productName = ShimmerView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

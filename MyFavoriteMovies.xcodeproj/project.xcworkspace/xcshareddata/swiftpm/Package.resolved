@@ -1,5 +1,5 @@
 {
-  "originHash" : "e8f130fe30ac6cdc940ef06ee1e8535e9f46ffee6aeead1722b9525562f6ce08",
+  "originHash" : "0bc30645c0871490b5d3c2120b1a7920dce6e3059c9e03e08293a111c32945f0",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "513364f870f6bfc468f9d2ff0a95caccc10044c5",
         "version" : "5.10.2"
+      }
+    },
+    {
+      "identity" : "shimmerview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mercari/ShimmerView",
+      "state" : {
+        "revision" : "f34a268db28b49231ea236dafcd976507cef9dfd",
+        "version" : "0.5.1"
       }
     }
   ],
