@@ -129,7 +129,7 @@ extension NewsListItemCell {
     func setupCell(with model: NewsListItemModel, showDivider: Bool) {
         image.setImageFrom(url: model.image)
         titleLabelView.text = model.title
-        descriptionLabelView.text = model.description
+        descriptionLabelView.text = model.headline
         
         if let date = model.date.toDate()?.distanceFromNow() {
             dateLabelView.text = "\(date) \(String(localized: "Ago"))"

@@ -65,7 +65,7 @@ class Service {
         let baseUrl = "http://192.168.15.108:8080/api/v1/" + endpoint
         
         if let pathParameters = pathParameters {
-            var urlString = baseUrl + pathParameters.joined(separator: "/")
+            var urlString = baseUrl + "/" + pathParameters.joined(separator: "/")
             
             if let queryParameters = queryParameters {
                 urlString += "?" + queryParameters.map { key, value in

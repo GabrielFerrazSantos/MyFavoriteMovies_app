@@ -178,9 +178,10 @@ extension MoviesListViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredVertically)
-        
-        
-        
         collectionView.deselectItem(at: indexPath, animated: true)
+        
+        guard let data = viewModel.viewData.data, case .movies(let movies) = data[indexPath.section] else { return }
+        
+        viewModel.goToMovie(movies[indexPath.row].id)
     }
 }

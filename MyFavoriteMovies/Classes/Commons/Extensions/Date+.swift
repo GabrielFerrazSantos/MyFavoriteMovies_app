@@ -14,7 +14,7 @@ extension Date {
     
     func distanceFromNow() -> String? {
         let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.day, .hour, .minute]
+        formatter.allowedUnits = [.day, .hour]
         formatter.unitsStyle = .full
         return formatter.string(from: self, to: .now)
     }

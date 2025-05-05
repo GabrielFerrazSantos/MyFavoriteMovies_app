@@ -11,6 +11,12 @@ class Controller: UIViewController {
     // MARK: - Properties
     var scrollViewHeight: CGFloat?
     
+    // MARK: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setupNavigation()
+    }
+    
     // MARK: - Functions
     func setupNavigation() {
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(
@@ -20,7 +26,13 @@ class Controller: UIViewController {
             action: nil
         )
         
+        let appearance = UINavigationBarAppearance()
+        appearance.backgroundColor = .appThemeColor
+        appearance.shadowColor = .appThemeColor
+        
         navigationController?.navigationBar.topItem?.backBarButtonItem?.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     
     func hideKeyboard() {

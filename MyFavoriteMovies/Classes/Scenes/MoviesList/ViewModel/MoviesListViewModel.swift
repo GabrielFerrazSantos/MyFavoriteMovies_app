@@ -10,9 +10,17 @@ import UIKit
 protocol MoviesListViewModel {
     var state: Bindable<NewsListViewModelState> { get }
     var viewData: MoviesListViewData { get }
+    var coordinator: MoviesListViewModelDelegate? { get set }
     
     func fetchMoviesList()
+    
+    func goToMovie(_ movieId: Int)
 }
+
+protocol MoviesListViewModelDelegate {
+    func goToMovie(_ movieId: Int)
+}
+
 
 enum MoviesListViewModelState {
     case initial
@@ -25,6 +33,7 @@ enum MoviesListViewModelState {
 class MoviesListViewModelConcrete: MoviesListViewModel {
     // MARK: - Properties
     var state: Bindable<NewsListViewModelState> = .init(.initial)
+    var coordinator: MoviesListViewModelDelegate?
     var viewData: MoviesListViewData = MoviesListViewDataConcrete()
     var service: MoviesListService = MoviesListServiceConcrete()
     
@@ -38,5 +47,9 @@ class MoviesListViewModelConcrete: MoviesListViewModel {
         } failure: { [weak self] _ in
             self?.state.value = .failure
         }
+    }
+    
+    func goToMovie(_ movieId: Int) {
+        coordinator?.goToMovie(movieId)
     }
 }

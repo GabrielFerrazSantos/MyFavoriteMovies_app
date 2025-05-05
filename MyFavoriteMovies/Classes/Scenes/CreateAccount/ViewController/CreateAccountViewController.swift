@@ -77,11 +77,15 @@ class CreateAccountViewController: Controller {
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigation()
         setupViewCode()
         bindViewModel()
         hideKeyboard()
         setupKeyboardNotifications()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     // MARK: - Bind

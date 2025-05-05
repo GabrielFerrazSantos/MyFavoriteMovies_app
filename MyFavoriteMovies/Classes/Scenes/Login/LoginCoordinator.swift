@@ -34,7 +34,7 @@ extension LoginCoordinator: LoginViewModelDelegate {
     
     func goToHome() {
         let viewData = TabBarViewDataConcrete()
-        let viewController = TabBarController(viewData: viewData)
+        let viewController = TabBarController(viewData: viewData, rootViewController: rootViewController)
         rootViewController.pushViewController(viewController, animated: true)
     }
 }

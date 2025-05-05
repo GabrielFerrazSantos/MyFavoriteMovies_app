@@ -160,6 +160,10 @@ extension NewsListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        
+        guard let data = viewModel.viewData.data, case .news(let news) = data[indexPath.section] else { return }
+        
+        viewModel.goToNews(news[indexPath.row].id)
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {

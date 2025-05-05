@@ -7,6 +7,7 @@
 
 struct MoviesListItemModel: Codable {
     // MARK: - Properties
+    let id: Int
     let poster: String
     let title: String
     let releaseDate: String

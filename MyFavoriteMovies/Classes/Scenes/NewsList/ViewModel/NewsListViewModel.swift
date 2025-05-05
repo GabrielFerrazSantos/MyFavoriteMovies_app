@@ -10,10 +10,17 @@ import UIKit
 protocol NewsListViewModel {
     var state: Bindable<NewsListViewModelState> { get }
     var viewData: NewsListViewData { get }
+    var coordinator: NewsListViewModelDelegate? { get set }
     
     func fetchNewsList()
     func filter(tag: String, indexPath: IndexPath)
     func removeFilter()
+    
+    func goToNews(_ newsId: Int)
+}
+
+protocol NewsListViewModelDelegate {
+    func goToNews(_ newsId: Int)
 }
 
 enum NewsListViewModelState {
@@ -29,6 +36,7 @@ class NewsListViewModelConcrete: NewsListViewModel {
     var state: Bindable<NewsListViewModelState> = .init(.initial)
     var viewData: NewsListViewData = NewsListViewDataConcrete()
     var service: NewsListService = NewsListServiceConcrete()
+    var coordinator: NewsListViewModelDelegate?
     
     // MARK: - Functions
     func fetchNewsList() {
@@ -63,5 +71,9 @@ class NewsListViewModelConcrete: NewsListViewModel {
     func removeFilter() {
         viewData.resetToOriginalData()
         state.value = .filter
+    }
+    
+    func goToNews(_ newsId: Int) {
+        coordinator?.goToNews(newsId)
     }
 }

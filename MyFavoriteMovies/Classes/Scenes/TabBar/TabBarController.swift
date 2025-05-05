@@ -10,10 +10,12 @@ import UIKit
 class TabBarController: UITabBarController {    
     // MARK: - Properties
     let viewData: TabBarViewData
+    let rootViewController: UINavigationController
     
     // MARK: - Initializers
-    init(viewData: TabBarViewData) {
+    init(viewData: TabBarViewData, rootViewController: UINavigationController) {
         self.viewData = viewData
+        self.rootViewController = rootViewController
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -30,20 +32,20 @@ class TabBarController: UITabBarController {
     
     // MARK: - Functions
     func setupTabs() {
-        let moviesViewController = MoviesListViewController(viewModel: MoviesListViewModelConcrete())
-        let newsViewController = NewsListViewController(viewModel: NewsListViewModelConcrete())
+        let moviesListCoordinator = MoviesListCoordinator(rootViewController: rootViewController)
+        let newsListCoordinator = NewsListCoordinator(rootViewController: rootViewController)
         let profileViewController = ProfileViewController()
         
-        moviesViewController.tabBarItem.title = viewData.moviesTitle
-        moviesViewController.tabBarItem.image = viewData.moviesIcon
+        moviesListCoordinator.viewController.tabBarItem.title = viewData.moviesTitle
+        moviesListCoordinator.viewController.tabBarItem.image = viewData.moviesIcon
         
-        newsViewController.tabBarItem.title = viewData.newsTitle
-        newsViewController.tabBarItem.image = viewData.newsIcon
+        newsListCoordinator.viewController.tabBarItem.title = viewData.newsTitle
+        newsListCoordinator.viewController.tabBarItem.image = viewData.newsIcon
         
         profileViewController.tabBarItem.title = viewData.profileTitle
         profileViewController.tabBarItem.image = viewData.profileIcon
         
-        setViewControllers([moviesViewController, newsViewController, profileViewController], animated: true)
+        setViewControllers([moviesListCoordinator.viewController, newsListCoordinator.viewController, profileViewController], animated: true)
     }
     
     func setupAppearance() {
