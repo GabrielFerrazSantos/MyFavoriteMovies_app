@@ -112,7 +112,7 @@ extension FactoryWriteReviewCell: ViewCode {
                 sendButton.topAnchor.constraint(equalTo: reviewInput.bottomAnchor),
                 sendButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
                 sendButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-                sendButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40)
+                sendButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
             ]
         )
     }

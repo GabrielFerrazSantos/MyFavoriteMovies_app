@@ -73,7 +73,7 @@ extension FactoryWriteCommentaryCell: ViewCode {
                 sendButton.topAnchor.constraint(equalTo: commentaryInput.bottomAnchor),
                 sendButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
                 sendButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-                sendButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40)
+                sendButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
             ]
         )
     }

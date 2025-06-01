@@ -88,7 +88,7 @@ extension FactoryReviewCell: ViewCode {
 //                avatarView.heightAnchor.constraint(equalToConstant: 50),
 //                avatarView.widthAnchor.constraint(equalToConstant: 50),
                 
-                usernameLabelView.topAnchor.constraint(equalTo: topAnchor, constant: 10),
+                usernameLabelView.topAnchor.constraint(equalTo: topAnchor, constant: 15),
                 usernameLabelView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
                 usernameLabelView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
                 
@@ -99,10 +99,10 @@ extension FactoryReviewCell: ViewCode {
                 scoreLabelView.topAnchor.constraint(equalTo: reviewLabelView.bottomAnchor, constant: 5),
                 scoreLabelView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
                 
-                dividerView.topAnchor.constraint(equalTo: scoreLabelView.bottomAnchor, constant: 20),
+                dividerView.topAnchor.constraint(equalTo: scoreLabelView.bottomAnchor, constant: 15),
                 dividerView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
                 dividerView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -24),
-                dividerView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20)
+                dividerView.bottomAnchor.constraint(equalTo: bottomAnchor)
             ]
         )
     }

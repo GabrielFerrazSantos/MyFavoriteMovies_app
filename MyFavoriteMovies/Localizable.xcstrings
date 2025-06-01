@@ -52,6 +52,23 @@
         }
       }
     },
+    "Commented" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commented on "
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comentou em "
+          }
+        }
+      }
+    },
     "CreateAccountSuccess" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -239,6 +256,23 @@
         }
       }
     },
+    "RecentActivities" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recent activities:"
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atividades recentes:"
+          }
+        }
+      }
+    },
     "Register" : {
       "extractionState" : "manual",
       "localizations" : {
@@ -252,6 +286,23 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cadastre-se"
+          }
+        }
+      }
+    },
+    "Reviewed" : {
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reviewed "
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaliou "
           }
         }
       }

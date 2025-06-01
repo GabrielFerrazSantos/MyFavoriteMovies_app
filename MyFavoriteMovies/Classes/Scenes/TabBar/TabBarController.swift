@@ -34,7 +34,7 @@ class TabBarController: UITabBarController {
     func setupTabs() {
         let moviesListCoordinator = MoviesListCoordinator(rootViewController: rootViewController)
         let newsListCoordinator = NewsListCoordinator(rootViewController: rootViewController)
-        let profileViewController = ProfileViewController()
+        let profileCoordinator = ProfileCoordinator(rootViewController: rootViewController)
         
         moviesListCoordinator.viewController.tabBarItem.title = viewData.moviesTitle
         moviesListCoordinator.viewController.tabBarItem.image = viewData.moviesIcon
@@ -42,10 +42,17 @@ class TabBarController: UITabBarController {
         newsListCoordinator.viewController.tabBarItem.title = viewData.newsTitle
         newsListCoordinator.viewController.tabBarItem.image = viewData.newsIcon
         
-        profileViewController.tabBarItem.title = viewData.profileTitle
-        profileViewController.tabBarItem.image = viewData.profileIcon
+        profileCoordinator.viewController.tabBarItem.title = viewData.profileTitle
+        profileCoordinator.viewController.tabBarItem.image = viewData.profileIcon
         
-        setViewControllers([moviesListCoordinator.viewController, newsListCoordinator.viewController, profileViewController], animated: true)
+        setViewControllers(
+            [
+                moviesListCoordinator.viewController,
+                newsListCoordinator.viewController,
+                profileCoordinator.viewController
+            ],
+            animated: true
+        )
     }
     
     func setupAppearance() {
